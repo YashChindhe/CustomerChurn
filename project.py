@@ -42,7 +42,7 @@ svm_model = svm.SVC(kernel='linear', random_state=42)
 svm_model.fit(X_train, y_train)
 
 # Streamlit app
-st.title("📊 Customer Churn Prediction")
+st.title("Customer Churn Prediction")
 
 st.markdown("Use the options in the sidebar to simulate customer behavior and see if they’re likely to churn.")
 
@@ -84,14 +84,14 @@ lr_pred = lr.predict(input_df)[0]
 dt_pred = dt.predict(input_df)[0]
 svm_pred = svm_model.predict(input_df)[0]
 
-st.subheader("🔍 Predictions:")
-st.success(f"🔹 Logistic Regression: {'Churn' if lr_pred == 1 else 'No Churn'}")
-st.success(f"🔹 Decision Tree: {'Churn' if dt_pred == 1 else 'No Churn'}")
-st.success(f"🔹 SVM: {'Churn' if svm_pred == 1 else 'No Churn'}")
+st.subheader("Predictions:")
+st.success(f"Logistic Regression: {'Churn' if lr_pred == 1 else 'No Churn'}")
+st.success(f"Decision Tree: {'Churn' if dt_pred == 1 else 'No Churn'}")
+st.success(f"SVM: {'Churn' if svm_pred == 1 else 'No Churn'}")
 
 # Accuracy metrics
 st.markdown("---")
-st.subheader("📈 Model Accuracy (Test Set)")
-st.write(f"✅ Logistic Regression: {accuracy_score(y_test, lr.predict(X_test)):.2f}")
-st.write(f"✅ Decision Tree: {accuracy_score(y_test, dt.predict(X_test)):.2f}")
-st.write(f"✅ SVM: {accuracy_score(y_test, svm_model.predict(X_test)):.2f}")
+st.subheader("Model Accuracy (Test Set)")
+st.write(f"Logistic Regression: {accuracy_score(y_test, lr.predict(X_test)):.2f}")
+st.write(f"Decision Tree: {accuracy_score(y_test, dt.predict(X_test)):.2f}")
+st.write(f"SVM: {accuracy_score(y_test, svm_model.predict(X_test)):.2f}")
