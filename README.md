@@ -15,6 +15,7 @@ CustomerChurn/
 ├── project_with_UI.py
 ├── project_with_Visuals - manual.ipynb
 ├── project_with_Visuals - sklearn.ipynb
+├── requirements.txt
 └── README.md
 ```
 
